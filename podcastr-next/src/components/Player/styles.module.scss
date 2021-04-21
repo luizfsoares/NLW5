@@ -1,0 +1,122 @@
+//Todo o css daqui será aplicado SOMENTE dentro do componente Header
+//Precisa ficar usando esse padrão, cria uma pasta de componente, dentro o componente e seu css no formato styles.module.scss
+
+
+.playerContainer{
+
+    width: 26.5rem;
+    height: 100vh; //o máximo da altura da tela. 100% do viewport height
+
+    padding: 3rem 4rem;
+    background: var(--purple-500);
+    color: var(--white);
+    display: flex;
+    flex-direction: column; //um abaixo do outro
+    align-items: center; // alinha na vertical
+    justify-content: space-between;
+
+    header{ //aplicado no header dentro do elemento que tem o playerContainer
+
+    display: flex;
+    align-items: center; // alinha verticalmente, precisa de display flex
+    gap: 1rem; //usado dentro de flexbox e grid para colocar um espaçamento, neste caso de 16px, entre os elementos.
+    }
+
+    strong{
+        font-family: Lexend, sans-serif;
+        font-weight: 600;
+    }
+
+    footer{
+
+        align-self: stretch; //vai fazer ocupar a largura toda do footer
+
+        &.empty{
+            opacity: 0.5; // quando tiver com a estilização empty 
+        }
+    }
+}
+
+.emptyPlayer{
+
+    width: 100%;
+    height: 20rem;
+    border-radius: 1.5rem;
+    border: 1.5px dashed var(--purple-300); //dashed = borda pontilhada 
+
+    background: linear-gradient(143.8deg, rgba(145,100,250,0.8) 0%, rgba(0,0,0,0) 100% );
+
+    padding: 4rem;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.progress{
+
+    display: flex;
+    align-items: center;
+    gap: 0.5srem;
+    //flex-direction: row;
+    font-size: 0.875rem;
+
+    span{
+
+        display: inline-block;
+        width: 4rem;
+        text-align: center;
+    }
+
+    
+
+    .slider{
+        flex: 1;
+        align-items: center;
+        .emptySlider{
+            width: 100%;
+            height: 5px;
+            border: 1px solid rgb(148, 31, 184);
+            background: var(--purple-300);
+            border-radius: 2px;
+        }
+    }
+    
+}
+
+.buttons {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+
+    button{
+        width: 3rem;
+        height: 3rem;
+        border-radius: 1rem;
+        background: transparent;
+        border: 0;
+        font-size: 0; //reseta o tamanho de um button, quando so tem uma imagem, ela fica centralizada
+
+        &.playButton{
+
+            width: 4rem;
+            height: 4rem;
+            border-radius: 1rem;
+            background: var(--purple-400);
+        }
+    }
+
+    button:hover{
+
+        background: var(--purple-400);
+        border: none;
+        transition: 1s;
+    }
+}
+
+
+
+ 
